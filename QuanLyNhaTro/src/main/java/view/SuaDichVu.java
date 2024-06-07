@@ -23,6 +23,7 @@ public class SuaDichVu extends javax.swing.JFrame {
         dichVuController = new DichVuController();
         dichvu = dichVuController.selectById(maDichVu);
         initComponents();
+        this.setLocationRelativeTo(null);
         maDichVuText.setText(String.valueOf(dichvu.getMaDichVu()));
         tenDichVuText.setText(dichvu.getTenDichVu());
         giaDichVuText.setText(String.valueOf(dichvu.getGia()));

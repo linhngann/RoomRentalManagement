@@ -20,6 +20,7 @@ public class ThemDichVu extends javax.swing.JFrame {
      */
     public ThemDichVu() {
         initComponents();
+        this.setLocationRelativeTo(null);
         dichVuController = new DichVuController();
     }
 
