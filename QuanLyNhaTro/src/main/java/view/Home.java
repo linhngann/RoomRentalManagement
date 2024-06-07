@@ -34,32 +34,38 @@ public class Home extends javax.swing.JFrame {
      */
     
     
-    Color defaultColor, ClickedColor;
-    public Home() {
-        initComponents();
-        defaultColor = new Color(13,36,51);
-        ClickedColor = new Color(240,141,57);
-        
-        NhaTro.setBackground(defaultColor);
-        PhongTro.setBackground(defaultColor);
-        tabtaisan.setBackground(defaultColor);
-        tabdichvu.setBackground(defaultColor);
-        HopDong.setBackground(defaultColor);
-        NguoiChoThue.setBackground(defaultColor);
-        BaoCao.setBackground(defaultColor);
-        HoaDon.setBackground(defaultColor);
-        
-    }
-
-    
-    public void loadDataNhaTro()
+    Color defaultColor, ClickedColor, doneColor;
+     public void loadDataNhaTro()
     {
         nhaTroController = new NhaTroController();
         tblnhatro.setModel(defaultTableModel);
         setheaderNhaTro();
         setDataNhaTro(nhaTroController.sellectAll());
-         tblnhatro.getTableHeader().setFont(new Font("Time New Roman", Font.BOLD, 16));
+        tblnhatro.getTableHeader().setFont(new Font("SansSefif", Font.PLAIN, 16));
+        tblnhatro.getTableHeader().setBackground(doneColor);
+        tblnhatro.setForeground(new Color(41, 41, 41));
     }
+    public Home() {
+        initComponents();
+        defaultColor = new Color(255, 255, 255);
+        ClickedColor = new Color(41, 98, 255);
+        doneColor = new Color(0, 0, 0);
+        motelLabel.setForeground(defaultColor);
+        nhaTroPanel.setBackground(ClickedColor);
+        //motelLabel.setForeground(doneColor);
+        PhongTro.setBackground(defaultColor);
+        t.setBackground(defaultColor);
+        tabdichvu.setBackground(defaultColor);
+        hopDongPanel.setBackground(defaultColor);
+        NguoiChoThue.setBackground(defaultColor);
+        BaoCao.setBackground(defaultColor);
+        HoaDon.setBackground(defaultColor);
+        loadDataNhaTro();
+        
+    }
+
+    
+   
     public void setheaderNhaTro()
     {
         defaultTableModel.setColumnCount(0);
@@ -70,6 +76,7 @@ public class Home extends javax.swing.JFrame {
         defaultTableModel.addColumn("Ngày bắt đầu");
         defaultTableModel.addColumn("Trạng thái");
         defaultTableModel.addColumn("ID nhân viên");
+        
     }
     public void setDataNhaTro(List<NhaTro> listnhatro)
     {
@@ -121,22 +128,22 @@ public class Home extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         sidebar = new javax.swing.JPanel();
-        NhaTro = new javax.swing.JPanel();
-        NhaTroJframe = new javax.swing.JLabel();
+        nhaTroPanel = new javax.swing.JPanel();
+        motelLabel = new javax.swing.JLabel();
         PhongTro = new javax.swing.JPanel();
-        NhaTroJframe1 = new javax.swing.JLabel();
-        tabtaisan = new javax.swing.JPanel();
-        NhaTroJframe3 = new javax.swing.JLabel();
+        houseLabel = new javax.swing.JLabel();
+        t = new javax.swing.JPanel();
+        assetLabel = new javax.swing.JLabel();
         tabdichvu = new javax.swing.JPanel();
-        NhaTroJframe4 = new javax.swing.JLabel();
-        HopDong = new javax.swing.JPanel();
-        NhaTroJframe5 = new javax.swing.JLabel();
+        seviceLabel = new javax.swing.JLabel();
+        hopDongPanel = new javax.swing.JPanel();
+        contractLabel = new javax.swing.JLabel();
         NguoiChoThue = new javax.swing.JPanel();
-        NhaTroJframe6 = new javax.swing.JLabel();
+        renterLabel = new javax.swing.JLabel();
         BaoCao = new javax.swing.JPanel();
-        NhaTroJframe7 = new javax.swing.JLabel();
+        reportLabel = new javax.swing.JLabel();
         HoaDon = new javax.swing.JPanel();
-        NhaTroJframe8 = new javax.swing.JLabel();
+        billLabel = new javax.swing.JLabel();
         list = new javax.swing.JPanel();
         taisan = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -167,40 +174,41 @@ public class Home extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        sidebar.setBackground(new java.awt.Color(13, 36, 51));
+        sidebar.setBackground(new java.awt.Color(255, 255, 255));
 
-        NhaTro.setBackground(new java.awt.Color(13, 36, 51));
-        NhaTro.addMouseListener(new java.awt.event.MouseAdapter() {
+        nhaTroPanel.setBackground(new java.awt.Color(255, 255, 255));
+        nhaTroPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                NhaTroMouseClicked(evt);
+                nhaTroPanelMouseClicked(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                NhaTroMousePressed(evt);
+                nhaTroPanelMousePressed(evt);
             }
         });
 
-        NhaTroJframe.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        NhaTroJframe.setForeground(new java.awt.Color(255, 255, 255));
-        NhaTroJframe.setText("Nhà trọ");
+        motelLabel.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        motelLabel.setForeground(new java.awt.Color(51, 51, 51));
+        motelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hotel.png"))); // NOI18N
+        motelLabel.setText("Nhà trọ");
 
-        javax.swing.GroupLayout NhaTroLayout = new javax.swing.GroupLayout(NhaTro);
-        NhaTro.setLayout(NhaTroLayout);
-        NhaTroLayout.setHorizontalGroup(
-            NhaTroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NhaTroLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(NhaTroJframe, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout nhaTroPanelLayout = new javax.swing.GroupLayout(nhaTroPanel);
+        nhaTroPanel.setLayout(nhaTroPanelLayout);
+        nhaTroPanelLayout.setHorizontalGroup(
+            nhaTroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(nhaTroPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(motelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        NhaTroLayout.setVerticalGroup(
-            NhaTroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NhaTroLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(NhaTroJframe)
-                .addContainerGap(12, Short.MAX_VALUE))
+        nhaTroPanelLayout.setVerticalGroup(
+            nhaTroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nhaTroPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(motelLabel)
+                .addContainerGap())
         );
 
-        PhongTro.setBackground(new java.awt.Color(13, 36, 51));
+        PhongTro.setBackground(new java.awt.Color(255, 255, 255));
         PhongTro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PhongTroMouseClicked(evt);
@@ -210,59 +218,61 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        NhaTroJframe1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        NhaTroJframe1.setForeground(new java.awt.Color(255, 255, 255));
-        NhaTroJframe1.setText("Phòng trọ");
+        houseLabel.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        houseLabel.setForeground(new java.awt.Color(51, 51, 51));
+        houseLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/room.png"))); // NOI18N
+        houseLabel.setText("Phòng trọ");
 
         javax.swing.GroupLayout PhongTroLayout = new javax.swing.GroupLayout(PhongTro);
         PhongTro.setLayout(PhongTroLayout);
         PhongTroLayout.setHorizontalGroup(
             PhongTroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PhongTroLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(NhaTroJframe1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(houseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PhongTroLayout.setVerticalGroup(
             PhongTroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PhongTroLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(NhaTroJframe1)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(houseLabel)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
-        tabtaisan.setBackground(new java.awt.Color(13, 36, 51));
-        tabtaisan.addMouseListener(new java.awt.event.MouseAdapter() {
+        t.setBackground(new java.awt.Color(255, 255, 255));
+        t.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tabtaisanMouseClicked(evt);
+                tMouseClicked(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                tabtaisanMousePressed(evt);
+                tMousePressed(evt);
             }
         });
 
-        NhaTroJframe3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        NhaTroJframe3.setForeground(new java.awt.Color(255, 255, 255));
-        NhaTroJframe3.setText("Tài sản");
+        assetLabel.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        assetLabel.setForeground(new java.awt.Color(51, 51, 51));
+        assetLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/asset.png"))); // NOI18N
+        assetLabel.setText("Tài sản");
 
-        javax.swing.GroupLayout tabtaisanLayout = new javax.swing.GroupLayout(tabtaisan);
-        tabtaisan.setLayout(tabtaisanLayout);
-        tabtaisanLayout.setHorizontalGroup(
-            tabtaisanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabtaisanLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(NhaTroJframe3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout tLayout = new javax.swing.GroupLayout(t);
+        t.setLayout(tLayout);
+        tLayout.setHorizontalGroup(
+            tLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(assetLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        tabtaisanLayout.setVerticalGroup(
-            tabtaisanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabtaisanLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(NhaTroJframe3)
-                .addContainerGap(30, Short.MAX_VALUE))
+        tLayout.setVerticalGroup(
+            tLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(assetLabel)
+                .addContainerGap())
         );
 
-        tabdichvu.setBackground(new java.awt.Color(13, 36, 51));
+        tabdichvu.setBackground(new java.awt.Color(255, 255, 255));
         tabdichvu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabdichvuMouseClicked(evt);
@@ -272,59 +282,61 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        NhaTroJframe4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        NhaTroJframe4.setForeground(new java.awt.Color(255, 255, 255));
-        NhaTroJframe4.setText("Dịch vụ");
+        seviceLabel.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        seviceLabel.setForeground(new java.awt.Color(51, 51, 51));
+        seviceLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/sevice.png"))); // NOI18N
+        seviceLabel.setText("Dịch vụ");
 
         javax.swing.GroupLayout tabdichvuLayout = new javax.swing.GroupLayout(tabdichvu);
         tabdichvu.setLayout(tabdichvuLayout);
         tabdichvuLayout.setHorizontalGroup(
             tabdichvuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabdichvuLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(NhaTroJframe4, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(seviceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         tabdichvuLayout.setVerticalGroup(
             tabdichvuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabdichvuLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(NhaTroJframe4)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(seviceLabel)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        HopDong.setBackground(new java.awt.Color(13, 36, 51));
-        HopDong.addMouseListener(new java.awt.event.MouseAdapter() {
+        hopDongPanel.setBackground(new java.awt.Color(255, 255, 255));
+        hopDongPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                HopDongMouseClicked(evt);
+                hopDongPanelMouseClicked(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                HopDongMousePressed(evt);
+                hopDongPanelMousePressed(evt);
             }
         });
 
-        NhaTroJframe5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        NhaTroJframe5.setForeground(new java.awt.Color(255, 255, 255));
-        NhaTroJframe5.setText("Hợp đồng");
+        contractLabel.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        contractLabel.setForeground(new java.awt.Color(51, 51, 51));
+        contractLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/contract.png"))); // NOI18N
+        contractLabel.setText("Hợp đồng");
 
-        javax.swing.GroupLayout HopDongLayout = new javax.swing.GroupLayout(HopDong);
-        HopDong.setLayout(HopDongLayout);
-        HopDongLayout.setHorizontalGroup(
-            HopDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HopDongLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(NhaTroJframe5, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout hopDongPanelLayout = new javax.swing.GroupLayout(hopDongPanel);
+        hopDongPanel.setLayout(hopDongPanelLayout);
+        hopDongPanelLayout.setHorizontalGroup(
+            hopDongPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hopDongPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(contractLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        HopDongLayout.setVerticalGroup(
-            HopDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HopDongLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(NhaTroJframe5)
-                .addContainerGap(30, Short.MAX_VALUE))
+        hopDongPanelLayout.setVerticalGroup(
+            hopDongPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hopDongPanelLayout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(contractLabel)
+                .addContainerGap())
         );
 
-        NguoiChoThue.setBackground(new java.awt.Color(13, 36, 51));
+        NguoiChoThue.setBackground(new java.awt.Color(255, 255, 255));
         NguoiChoThue.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 NguoiChoThueMouseClicked(evt);
@@ -334,28 +346,29 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        NhaTroJframe6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        NhaTroJframe6.setForeground(new java.awt.Color(255, 255, 255));
-        NhaTroJframe6.setText("Người cho thuê");
+        renterLabel.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        renterLabel.setForeground(new java.awt.Color(51, 51, 51));
+        renterLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/renter.png"))); // NOI18N
+        renterLabel.setText("Người cho thuê");
 
         javax.swing.GroupLayout NguoiChoThueLayout = new javax.swing.GroupLayout(NguoiChoThue);
         NguoiChoThue.setLayout(NguoiChoThueLayout);
         NguoiChoThueLayout.setHorizontalGroup(
             NguoiChoThueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(NguoiChoThueLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(NhaTroJframe6, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(renterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         NguoiChoThueLayout.setVerticalGroup(
             NguoiChoThueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NguoiChoThueLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(NhaTroJframe6)
-                .addContainerGap(30, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NguoiChoThueLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(renterLabel)
+                .addContainerGap())
         );
 
-        BaoCao.setBackground(new java.awt.Color(13, 36, 51));
+        BaoCao.setBackground(new java.awt.Color(255, 255, 255));
         BaoCao.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BaoCaoMouseClicked(evt);
@@ -365,28 +378,29 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        NhaTroJframe7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        NhaTroJframe7.setForeground(new java.awt.Color(255, 255, 255));
-        NhaTroJframe7.setText("Báo cáo");
+        reportLabel.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        reportLabel.setForeground(new java.awt.Color(51, 51, 51));
+        reportLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/report.png"))); // NOI18N
+        reportLabel.setText("Báo cáo");
 
         javax.swing.GroupLayout BaoCaoLayout = new javax.swing.GroupLayout(BaoCao);
         BaoCao.setLayout(BaoCaoLayout);
         BaoCaoLayout.setHorizontalGroup(
             BaoCaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BaoCaoLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(NhaTroJframe7, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(reportLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         BaoCaoLayout.setVerticalGroup(
             BaoCaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BaoCaoLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(NhaTroJframe7)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(reportLabel)
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        HoaDon.setBackground(new java.awt.Color(13, 36, 51));
+        HoaDon.setBackground(new java.awt.Color(255, 255, 255));
         HoaDon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HoaDonMouseClicked(evt);
@@ -396,25 +410,26 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        NhaTroJframe8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        NhaTroJframe8.setForeground(new java.awt.Color(255, 255, 255));
-        NhaTroJframe8.setText("Hóa đơn");
+        billLabel.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        billLabel.setForeground(new java.awt.Color(51, 51, 51));
+        billLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/bill.png"))); // NOI18N
+        billLabel.setText("Hóa đơn");
 
         javax.swing.GroupLayout HoaDonLayout = new javax.swing.GroupLayout(HoaDon);
         HoaDon.setLayout(HoaDonLayout);
         HoaDonLayout.setHorizontalGroup(
             HoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HoaDonLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(NhaTroJframe8, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(billLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         HoaDonLayout.setVerticalGroup(
             HoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HoaDonLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(NhaTroJframe8)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(billLabel)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout sidebarLayout = new javax.swing.GroupLayout(sidebar);
@@ -424,35 +439,37 @@ public class Home extends javax.swing.JFrame {
             .addGroup(sidebarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(NhaTro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PhongTro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tabtaisan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tabdichvu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(HopDong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(NguoiChoThue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BaoCao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(HoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(BaoCao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(NguoiChoThue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(hopDongPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(t, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tabdichvu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PhongTro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(nhaTroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(HoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         sidebarLayout.setVerticalGroup(
             sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidebarLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(NhaTro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addComponent(nhaTroPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(PhongTro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tabdichvu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(tabtaisan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(HopDong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(hopDongPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(NguoiChoThue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BaoCao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(HoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(HoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel2.setText("Tai San");
@@ -614,7 +631,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(addNhaTro)
                     .addComponent(btnSuaNhaTro)
                     .addComponent(btndelete))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout nhatroLayout = new javax.swing.GroupLayout(nhatro);
@@ -838,14 +855,18 @@ public class Home extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(list, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(list, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(sidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -868,69 +889,112 @@ public class Home extends javax.swing.JFrame {
 
     private void HoaDonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HoaDonMousePressed
         // TODO add your handling code here:
-        NhaTro.setBackground(defaultColor);
+        nhaTroPanel.setBackground(defaultColor);
         PhongTro.setBackground(defaultColor);
-        tabtaisan.setBackground(defaultColor);
+        t.setBackground(defaultColor);
         tabdichvu.setBackground(defaultColor);
-        HopDong.setBackground(defaultColor);
+        hopDongPanel.setBackground(defaultColor);
         NguoiChoThue.setBackground(defaultColor);
         BaoCao.setBackground(defaultColor);
         HoaDon.setBackground(ClickedColor);
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        hopDongPanel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(defaultColor);
+        
 
 
     }//GEN-LAST:event_HoaDonMousePressed
 
     private void BaoCaoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BaoCaoMousePressed
         // TODO add your handling code here:
-        NhaTro.setBackground(defaultColor);
+        nhaTroPanel.setBackground(defaultColor);
         PhongTro.setBackground(defaultColor);
-        tabtaisan.setBackground(defaultColor);
+        t.setBackground(defaultColor);
         tabdichvu.setBackground(defaultColor);
-        HopDong.setBackground(defaultColor);
+        hopDongPanel.setBackground(defaultColor);
         NguoiChoThue.setBackground(defaultColor);
         BaoCao.setBackground(ClickedColor);
         HoaDon.setBackground(defaultColor);
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        hopDongPanel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(defaultColor);
+        billLabel.setForeground(doneColor);
+        
 
 
     }//GEN-LAST:event_BaoCaoMousePressed
 
     private void NguoiChoThueMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NguoiChoThueMousePressed
         // TODO add your handling code here:
-        NhaTro.setBackground(defaultColor);
+        nhaTroPanel.setBackground(defaultColor);
         PhongTro.setBackground(defaultColor);
-        tabtaisan.setBackground(defaultColor);
+        t.setBackground(defaultColor);
         tabdichvu.setBackground(defaultColor);
-        HopDong.setBackground(defaultColor);
+        hopDongPanel.setBackground(defaultColor);
         NguoiChoThue.setBackground(ClickedColor);
         BaoCao.setBackground(defaultColor);
         HoaDon.setBackground(defaultColor);
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        contractLabel.setForeground(doneColor);
+        renterLabel.setForeground(defaultColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
+        
 
     }//GEN-LAST:event_NguoiChoThueMousePressed
 
-    private void HopDongMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HopDongMousePressed
+    private void hopDongPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hopDongPanelMousePressed
         // TODO add your handling code here:
-        NhaTro.setBackground(defaultColor);
+        nhaTroPanel.setBackground(defaultColor);
         PhongTro.setBackground(defaultColor);
-        tabtaisan.setBackground(defaultColor);
+        t.setBackground(defaultColor);
         tabdichvu.setBackground(defaultColor);
-        HopDong.setBackground(ClickedColor);
+        hopDongPanel.setBackground(ClickedColor);
         NguoiChoThue.setBackground(defaultColor);
         BaoCao.setBackground(defaultColor);
         HoaDon.setBackground(defaultColor);
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        hopDongPanel.setForeground(defaultColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
 
-    }//GEN-LAST:event_HopDongMousePressed
+    }//GEN-LAST:event_hopDongPanelMousePressed
 
     private void tabdichvuMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabdichvuMousePressed
         // TODO add your handling code here:
-        NhaTro.setBackground(defaultColor);
+        nhaTroPanel.setBackground(defaultColor);
         PhongTro.setBackground(defaultColor);
-        tabtaisan.setBackground(defaultColor);
+        t.setBackground(defaultColor);
         tabdichvu.setBackground(ClickedColor);
-        HopDong.setBackground(defaultColor);
+        hopDongPanel.setBackground(defaultColor);
         NguoiChoThue.setBackground(defaultColor);
         BaoCao.setBackground(defaultColor);
         HoaDon.setBackground(defaultColor);
-
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(defaultColor);
+        assetLabel.setForeground(doneColor);
+        contractLabel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
+        
     }//GEN-LAST:event_tabdichvuMousePressed
 
     private void tabdichvuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabdichvuMouseClicked
@@ -943,50 +1007,67 @@ public class Home extends javax.swing.JFrame {
         nguoichothue.setVisible(false);
         baocao.setVisible(false);
         hoadon.setVisible(false);
-        
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(defaultColor);
+        assetLabel.setForeground(doneColor);
+        hopDongPanel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
         loadDataDichVu();
     }//GEN-LAST:event_tabdichvuMouseClicked
 
-    private void tabtaisanMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabtaisanMousePressed
+    private void tMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tMousePressed
         // TODO add your handling code here:
-        NhaTro.setBackground(defaultColor);
+        nhaTroPanel.setBackground(defaultColor);
         PhongTro.setBackground(defaultColor);
-        tabtaisan.setBackground(ClickedColor);
+        t.setBackground(ClickedColor);
         tabdichvu.setBackground(defaultColor);
-        HopDong.setBackground(defaultColor);
+        hopDongPanel.setBackground(defaultColor);
         NguoiChoThue.setBackground(defaultColor);
         BaoCao.setBackground(defaultColor);
         HoaDon.setBackground(defaultColor);
 
-    }//GEN-LAST:event_tabtaisanMousePressed
+    }//GEN-LAST:event_tMousePressed
 
     private void PhongTroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PhongTroMousePressed
         // TODO add your handling code here:
-        NhaTro.setBackground(defaultColor);
+        nhaTroPanel.setBackground(defaultColor);
         PhongTro.setBackground(ClickedColor);
-        tabtaisan.setBackground(defaultColor);
+        t.setBackground(defaultColor);
         tabdichvu.setBackground(defaultColor);
-        HopDong.setBackground(defaultColor);
+        hopDongPanel.setBackground(defaultColor);
         NguoiChoThue.setBackground(defaultColor);
         BaoCao.setBackground(defaultColor);
         HoaDon.setBackground(defaultColor);
 
     }//GEN-LAST:event_PhongTroMousePressed
 
-    private void NhaTroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NhaTroMousePressed
+    private void nhaTroPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nhaTroPanelMousePressed
         // TODO add your handling code here:
-        NhaTro.setBackground(ClickedColor);
+        nhaTroPanel.setBackground(ClickedColor);
         PhongTro.setBackground(defaultColor);
-        tabtaisan.setBackground(defaultColor);
+        t.setBackground(defaultColor);
         tabdichvu.setBackground(defaultColor);
-        HopDong.setBackground(defaultColor);
+        hopDongPanel.setBackground(defaultColor);
         NguoiChoThue.setBackground(defaultColor);
         BaoCao.setBackground(defaultColor);
         HoaDon.setBackground(defaultColor);
+        motelLabel.setForeground(defaultColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        hopDongPanel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
+       
+        
 
-    }//GEN-LAST:event_NhaTroMousePressed
+    }//GEN-LAST:event_nhaTroPanelMousePressed
 
-    private void NhaTroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NhaTroMouseClicked
+    private void nhaTroPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nhaTroPanelMouseClicked
         // TODO add your handling code here:
         nhatro.setVisible(true);
         phongtro.setVisible(false);
@@ -996,9 +1077,16 @@ public class Home extends javax.swing.JFrame {
         nguoichothue.setVisible(false);
         baocao.setVisible(false);
         hoadon.setVisible(false);
-        
+        motelLabel.setForeground(defaultColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        contractLabel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
         this.loadDataNhaTro();
-    }//GEN-LAST:event_NhaTroMouseClicked
+    }//GEN-LAST:event_nhaTroPanelMouseClicked
 
     private void PhongTroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PhongTroMouseClicked
         // TODO add your handling code here:
@@ -1010,9 +1098,17 @@ public class Home extends javax.swing.JFrame {
         nguoichothue.setVisible(false);
         baocao.setVisible(false);
         hoadon.setVisible(false);
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(defaultColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        contractLabel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
     }//GEN-LAST:event_PhongTroMouseClicked
 
-    private void tabtaisanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabtaisanMouseClicked
+    private void tMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tMouseClicked
         // TODO add your handling code here:
         nhatro.setVisible(false);
         phongtro.setVisible(false);
@@ -1022,9 +1118,17 @@ public class Home extends javax.swing.JFrame {
         nguoichothue.setVisible(false);
         baocao.setVisible(false);
         hoadon.setVisible(false);
-    }//GEN-LAST:event_tabtaisanMouseClicked
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(defaultColor);
+        contractLabel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
+    }//GEN-LAST:event_tMouseClicked
 
-    private void HopDongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HopDongMouseClicked
+    private void hopDongPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hopDongPanelMouseClicked
         // TODO add your handling code here:
         nhatro.setVisible(false);
         phongtro.setVisible(false);
@@ -1034,7 +1138,15 @@ public class Home extends javax.swing.JFrame {
         nguoichothue.setVisible(false);
         baocao.setVisible(false);
         hoadon.setVisible(false);
-    }//GEN-LAST:event_HopDongMouseClicked
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        contractLabel.setForeground(defaultColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
+    }//GEN-LAST:event_hopDongPanelMouseClicked
 
     private void NguoiChoThueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NguoiChoThueMouseClicked
         // TODO add your handling code here:
@@ -1046,6 +1158,14 @@ public class Home extends javax.swing.JFrame {
         nguoichothue.setVisible(true);
         baocao.setVisible(false);
         hoadon.setVisible(false);
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        contractLabel.setForeground(doneColor);
+        renterLabel.setForeground(defaultColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(doneColor);
     }//GEN-LAST:event_NguoiChoThueMouseClicked
 
     private void BaoCaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BaoCaoMouseClicked
@@ -1058,6 +1178,14 @@ public class Home extends javax.swing.JFrame {
         nguoichothue.setVisible(false);
         baocao.setVisible(true);
         hoadon.setVisible(false);
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        contractLabel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(defaultColor);
+        billLabel.setForeground(doneColor);
     }//GEN-LAST:event_BaoCaoMouseClicked
 
     private void HoaDonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HoaDonMouseClicked
@@ -1070,51 +1198,15 @@ public class Home extends javax.swing.JFrame {
         nguoichothue.setVisible(false);
         baocao.setVisible(false);
         hoadon.setVisible(true);
+        motelLabel.setForeground(doneColor);
+        houseLabel.setForeground(doneColor);
+        seviceLabel.setForeground(doneColor);
+        assetLabel.setForeground(doneColor);
+        contractLabel.setForeground(doneColor);
+        renterLabel.setForeground(doneColor);
+        reportLabel.setForeground(doneColor);
+        billLabel.setForeground(defaultColor);
     }//GEN-LAST:event_HoaDonMouseClicked
-
-    private void addNhaTrothemNhaTro(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addNhaTrothemNhaTro
-        // TODO add your handling code here:
-        ThemNhaTro nhatro = new ThemNhaTro(this);
-        nhatro.setVisible(true);
-        
-    }//GEN-LAST:event_addNhaTrothemNhaTro
-
-    private void btnSuaNhaTroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSuaNhaTroMouseClicked
-        // TODO add your handling code here:
-        int row = tblnhatro.getSelectedRow();
-        if(row == -1)
-        {
-            JOptionPane.showMessageDialog(Home.this , "Vui lòng chọn nhà trọ trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
-        }
-        else
-        {
-            String maNhaTro = String.valueOf(tblnhatro.getValueAt(row,0 ));
-            new SuaNhaTro(maNhaTro).setVisible(true);
-        }
-    }//GEN-LAST:event_btnSuaNhaTroMouseClicked
-
-    private void btndeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndeleteMouseClicked
-        // TODO add your handling code here:
-        int row = tblnhatro.getSelectedRow();
-        if(row == -1)
-        {
-            JOptionPane.showMessageDialog(Home.this , "Vui lòng chọn nhà trọ trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
-        }
-        else
-        {
-            int confirm = JOptionPane.showConfirmDialog(Home.this, "Bạn chắc chắn muốn xóa không?");
-
-            if(confirm == JOptionPane.YES_OPTION)
-            {
-                String maNhaTro = String.valueOf(tblnhatro.getValueAt(row,0 ));
-
-                nhaTroController.DeleteMa(maNhaTro);
-                defaultTableModel.setRowCount(0);
-                setDataNhaTro(nhaTroController.sellectAll());
-            }
-        }
-        this.loadDataNhaTro();
-    }//GEN-LAST:event_btndeleteMouseClicked
 
     
     
@@ -1154,6 +1246,50 @@ public class Home extends javax.swing.JFrame {
         }
         this.loadDataDichVu();
     }//GEN-LAST:event_xoaDichVuButtonActionPerformed
+
+    private void btndeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndeleteMouseClicked
+        // TODO add your handling code here:
+        int row = tblnhatro.getSelectedRow();
+        if(row == -1)
+        {
+            JOptionPane.showMessageDialog(Home.this , "Vui lòng chọn nhà trọ trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
+        else
+        {
+            int confirm = JOptionPane.showConfirmDialog(Home.this, "Bạn chắc chắn muốn xóa không?");
+
+            if(confirm == JOptionPane.YES_OPTION)
+            {
+                String maNhaTro = String.valueOf(tblnhatro.getValueAt(row,0 ));
+
+                nhaTroController.DeleteMa(maNhaTro);
+                defaultTableModel.setRowCount(0);
+                setDataNhaTro(nhaTroController.sellectAll());
+            }
+        }
+        this.loadDataNhaTro();
+    }//GEN-LAST:event_btndeleteMouseClicked
+
+    private void btnSuaNhaTroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSuaNhaTroMouseClicked
+        // TODO add your handling code here:
+        int row = tblnhatro.getSelectedRow();
+        if(row == -1)
+        {
+            JOptionPane.showMessageDialog(Home.this , "Vui lòng chọn nhà trọ trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
+        else
+        {
+            String maNhaTro = String.valueOf(tblnhatro.getValueAt(row,0 ));
+            new SuaNhaTro(maNhaTro).setVisible(true);
+        }
+    }//GEN-LAST:event_btnSuaNhaTroMouseClicked
+
+    private void addNhaTrothemNhaTro(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addNhaTrothemNhaTro
+        // TODO add your handling code here:
+        ThemNhaTro nhatro = new ThemNhaTro(this);
+        nhatro.setVisible(true);
+
+    }//GEN-LAST:event_addNhaTrothemNhaTro
 
     /**
      * @param args the command line arguments
@@ -1196,25 +1332,20 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel BaoCao;
     private javax.swing.JTable DichVuTable;
     private javax.swing.JPanel HoaDon;
-    private javax.swing.JPanel HopDong;
     private javax.swing.JPanel NguoiChoThue;
-    private javax.swing.JPanel NhaTro;
-    private javax.swing.JLabel NhaTroJframe;
-    private javax.swing.JLabel NhaTroJframe1;
-    private javax.swing.JLabel NhaTroJframe3;
-    private javax.swing.JLabel NhaTroJframe4;
-    private javax.swing.JLabel NhaTroJframe5;
-    private javax.swing.JLabel NhaTroJframe6;
-    private javax.swing.JLabel NhaTroJframe7;
-    private javax.swing.JLabel NhaTroJframe8;
     private javax.swing.JPanel PhongTro;
     private javax.swing.JLabel addNhaTro;
+    private javax.swing.JLabel assetLabel;
     private javax.swing.JPanel baocao;
+    private javax.swing.JLabel billLabel;
     private javax.swing.JLabel btnSuaNhaTro;
     private javax.swing.JLabel btndelete;
+    private javax.swing.JLabel contractLabel;
     private javax.swing.JPanel dichvu;
     private javax.swing.JPanel hoadon;
+    private javax.swing.JPanel hopDongPanel;
     private javax.swing.JPanel hopdong;
+    private javax.swing.JLabel houseLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1227,13 +1358,18 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel list;
+    private javax.swing.JLabel motelLabel;
     private javax.swing.JPanel nguoichothue;
+    private javax.swing.JPanel nhaTroPanel;
     private javax.swing.JPanel nhatro;
     private javax.swing.JPanel phongtro;
+    private javax.swing.JLabel renterLabel;
+    private javax.swing.JLabel reportLabel;
+    private javax.swing.JLabel seviceLabel;
     private javax.swing.JPanel sidebar;
     private javax.swing.JButton suaDichVuButton;
+    private javax.swing.JPanel t;
     private javax.swing.JPanel tabdichvu;
-    private javax.swing.JPanel tabtaisan;
     private javax.swing.JPanel taisan;
     private javax.swing.JTable tblnhatro;
     private javax.swing.JButton themDichVuButton;

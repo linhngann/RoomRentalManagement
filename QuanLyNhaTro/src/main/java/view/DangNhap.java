@@ -175,7 +175,7 @@ public class DangNhap extends javax.swing.JFrame {
 
         Login.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 420, 450));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/background-bau-troi-xanh_060331630.jpg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/background.jpg"))); // NOI18N
         Login.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 550));
 
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 550));
