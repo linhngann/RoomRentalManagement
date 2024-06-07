@@ -6,6 +6,7 @@ DAO\DAOInterface.class
 view\SuaNhaTro$1.class
 view\Home$5.class
 view\ThemDichVu$3.class
+view\DangNhap$3.class
 view\Home$10.class
 view\SuaDichVu$2.class
 view\SuaDichVu.class
