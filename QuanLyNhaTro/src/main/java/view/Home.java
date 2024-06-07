@@ -47,7 +47,7 @@ public class Home extends javax.swing.JFrame {
     }
     public Home() {
         initComponents();
-        defaultColor = new Color(250, 250, 250);
+        defaultColor = new Color(227, 242, 253);
         ClickedColor = new Color(41, 98, 255);
         doneColor = new Color(0, 0, 0);
         motelLabel.setForeground(defaultColor);
@@ -166,20 +166,25 @@ public class Home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         dichvu = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        DichVuTable = new javax.swing.JTable();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         themDichVuButton = new javax.swing.JButton();
         suaDichVuButton = new javax.swing.JButton();
         xoaDichVuButton = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        DichVuTable = new javax.swing.JTable();
-        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(227, 242, 253));
 
-        sidebar.setBackground(new java.awt.Color(250, 250, 250));
+        sidebar.setBackground(new java.awt.Color(227, 242, 253));
         sidebar.setPreferredSize(new java.awt.Dimension(285, 649));
+        sidebar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nhaTroPanel.setBackground(new java.awt.Color(255, 255, 255));
         nhaTroPanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,6 +218,8 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        sidebar.add(nhaTroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 280, -1));
+
         PhongTro.setBackground(new java.awt.Color(255, 255, 255));
         PhongTro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -242,8 +249,10 @@ public class Home extends javax.swing.JFrame {
             .addGroup(PhongTroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(houseLabel)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
+
+        sidebar.add(PhongTro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 270, 50));
 
         t.setBackground(new java.awt.Color(255, 255, 255));
         t.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -267,15 +276,17 @@ public class Home extends javax.swing.JFrame {
             .addGroup(tLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(assetLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         tLayout.setVerticalGroup(
             tLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(assetLabel)
                 .addContainerGap())
         );
+
+        sidebar.add(t, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 280, 50));
 
         tabdichvu.setBackground(new java.awt.Color(255, 255, 255));
         tabdichvu.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -299,15 +310,17 @@ public class Home extends javax.swing.JFrame {
             .addGroup(tabdichvuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(seviceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         tabdichvuLayout.setVerticalGroup(
             tabdichvuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabdichvuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(seviceLabel)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
+
+        sidebar.add(tabdichvu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 280, 50));
 
         hopDongPanel.setBackground(new java.awt.Color(255, 255, 255));
         hopDongPanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -331,15 +344,17 @@ public class Home extends javax.swing.JFrame {
             .addGroup(hopDongPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(contractLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         hopDongPanelLayout.setVerticalGroup(
             hopDongPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hopDongPanelLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(contractLabel)
                 .addContainerGap())
         );
+
+        sidebar.add(hopDongPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 280, 50));
 
         NguoiChoThue.setBackground(new java.awt.Color(255, 255, 255));
         NguoiChoThue.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -363,15 +378,17 @@ public class Home extends javax.swing.JFrame {
             .addGroup(NguoiChoThueLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(renterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         NguoiChoThueLayout.setVerticalGroup(
             NguoiChoThueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NguoiChoThueLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addComponent(renterLabel)
                 .addContainerGap())
         );
+
+        sidebar.add(NguoiChoThue, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 280, 50));
 
         BaoCao.setBackground(new java.awt.Color(255, 255, 255));
         BaoCao.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -405,6 +422,8 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
+        sidebar.add(BaoCao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 280, -1));
+
         HoaDon.setBackground(new java.awt.Color(255, 255, 255));
         HoaDon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -427,55 +446,17 @@ public class Home extends javax.swing.JFrame {
             .addGroup(HoaDonLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(billLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HoaDonLayout.setVerticalGroup(
             HoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HoaDonLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(billLabel)
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout sidebarLayout = new javax.swing.GroupLayout(sidebar);
-        sidebar.setLayout(sidebarLayout);
-        sidebarLayout.setHorizontalGroup(
-            sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sidebarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(BaoCao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(NguoiChoThue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(hopDongPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(t, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tabdichvu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(PhongTro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(nhaTroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(HoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        sidebarLayout.setVerticalGroup(
-            sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sidebarLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(nhaTroPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(PhongTro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tabdichvu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(hopDongPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(NguoiChoThue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BaoCao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(HoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
-        );
+
+        sidebar.add(HoaDon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 280, 50));
 
         nhatro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -654,44 +635,7 @@ public class Home extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setPreferredSize(new java.awt.Dimension(944, 649));
 
-        themDichVuButton.setBackground(new java.awt.Color(250, 250, 250));
-        themDichVuButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        themDichVuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add.png"))); // NOI18N
-        themDichVuButton.setText("Thêm");
-        themDichVuButton.setBorder(null);
-        themDichVuButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themDichVuButtonActionPerformed(evt);
-            }
-        });
-
-        suaDichVuButton.setBackground(new java.awt.Color(250, 250, 250));
-        suaDichVuButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        suaDichVuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/edit.png"))); // NOI18N
-        suaDichVuButton.setText("Sửa");
-        suaDichVuButton.setBorder(null);
-        suaDichVuButton.setMaximumSize(new java.awt.Dimension(78, 24));
-        suaDichVuButton.setMinimumSize(new java.awt.Dimension(78, 24));
-        suaDichVuButton.setPreferredSize(new java.awt.Dimension(78, 24));
-        suaDichVuButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                suaDichVuButtonActionPerformed(evt);
-            }
-        });
-
-        xoaDichVuButton.setBackground(new java.awt.Color(250, 250, 250));
-        xoaDichVuButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        xoaDichVuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/delete.png"))); // NOI18N
-        xoaDichVuButton.setText("Xóa ");
-        xoaDichVuButton.setBorder(null);
-        xoaDichVuButton.setMaximumSize(new java.awt.Dimension(78, 24));
-        xoaDichVuButton.setMinimumSize(new java.awt.Dimension(78, 24));
-        xoaDichVuButton.setPreferredSize(new java.awt.Dimension(78, 24));
-        xoaDichVuButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                xoaDichVuButtonActionPerformed(evt);
-            }
-        });
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         DichVuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -716,44 +660,122 @@ public class Home extends javax.swing.JFrame {
         DichVuTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(DichVuTable);
 
-        jLabel7.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel9.setText("Lưu ý:");
+
+        jLabel10.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel10.setText("Các dịch vụ phải được gán cho từng khách thuê phòng để khi tính tiền sẽ có tiền dịch vụ đó.");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jSeparator1)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 939, Short.MAX_VALUE)))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel7.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
         jLabel7.setText("Danh sách các dịch vụ");
+
+        themDichVuButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        themDichVuButton.setForeground(new java.awt.Color(51, 51, 51));
+        themDichVuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add.png"))); // NOI18N
+        themDichVuButton.setText("Thêm");
+        themDichVuButton.setBorder(null);
+        themDichVuButton.setBorderPainted(false);
+        themDichVuButton.setContentAreaFilled(false);
+        themDichVuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                themDichVuButtonActionPerformed(evt);
+            }
+        });
+
+        suaDichVuButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        suaDichVuButton.setForeground(new java.awt.Color(51, 51, 51));
+        suaDichVuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/edit.png"))); // NOI18N
+        suaDichVuButton.setText("Sửa");
+        suaDichVuButton.setBorder(null);
+        suaDichVuButton.setBorderPainted(false);
+        suaDichVuButton.setContentAreaFilled(false);
+        suaDichVuButton.setMaximumSize(new java.awt.Dimension(78, 24));
+        suaDichVuButton.setMinimumSize(new java.awt.Dimension(78, 24));
+        suaDichVuButton.setPreferredSize(new java.awt.Dimension(78, 24));
+        suaDichVuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                suaDichVuButtonActionPerformed(evt);
+            }
+        });
+
+        xoaDichVuButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        xoaDichVuButton.setForeground(new java.awt.Color(51, 51, 51));
+        xoaDichVuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/delete.png"))); // NOI18N
+        xoaDichVuButton.setText("Xóa ");
+        xoaDichVuButton.setBorder(null);
+        xoaDichVuButton.setBorderPainted(false);
+        xoaDichVuButton.setContentAreaFilled(false);
+        xoaDichVuButton.setMaximumSize(new java.awt.Dimension(78, 24));
+        xoaDichVuButton.setMinimumSize(new java.awt.Dimension(78, 24));
+        xoaDichVuButton.setPreferredSize(new java.awt.Dimension(78, 24));
+        xoaDichVuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xoaDichVuButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 953, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(229, 229, 229)
-                        .addComponent(themDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(103, 103, 103)
-                        .addComponent(suaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(112, 112, 112)
-                        .addComponent(xoaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(346, 346, 346))
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(themDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(suaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(xoaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(themDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(suaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(xoaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(72, 72, 72))
+                    .addComponent(xoaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106))
         );
 
         dichvu.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, -1));
@@ -856,9 +878,9 @@ public class Home extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(list, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(sidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1340,6 +1362,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel hopdong;
     private javax.swing.JLabel houseLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1347,10 +1370,13 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel list;
     private javax.swing.JLabel motelLabel;
     private javax.swing.JPanel nguoichothue;
