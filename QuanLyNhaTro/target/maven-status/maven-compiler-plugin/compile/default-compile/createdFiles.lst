@@ -49,3 +49,4 @@ database\JDBCUtils.class
 view\SuaNhaTro.class
 view\DangNhap$2.class
 view\Home$14.class
+model\Admin.class

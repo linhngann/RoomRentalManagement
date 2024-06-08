@@ -47,6 +47,7 @@ public class Home extends javax.swing.JFrame {
     }
     public Home() {
         initComponents();
+        adminLabel.setText("Admin");
         defaultColor = new Color(227, 242, 253);
         ClickedColor = new Color(41, 98, 255);
         doneColor = new Color(0, 0, 0);
@@ -144,6 +145,7 @@ public class Home extends javax.swing.JFrame {
         reportLabel = new javax.swing.JLabel();
         HoaDon = new javax.swing.JPanel();
         billLabel = new javax.swing.JLabel();
+        adminLabel = new javax.swing.JLabel();
         list = new javax.swing.JPanel();
         nhatro = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -457,6 +459,13 @@ public class Home extends javax.swing.JFrame {
         );
 
         sidebar.add(HoaDon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 280, 50));
+
+        adminLabel.setBackground(new java.awt.Color(51, 51, 51));
+        adminLabel.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        adminLabel.setForeground(new java.awt.Color(102, 102, 102));
+        adminLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/admin.png"))); // NOI18N
+        adminLabel.setText("Admin");
+        sidebar.add(adminLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, -1));
 
         nhatro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1350,6 +1359,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel NguoiChoThue;
     private javax.swing.JPanel PhongTro;
     private javax.swing.JLabel addNhaTro;
+    private javax.swing.JLabel adminLabel;
     private javax.swing.JLabel assetLabel;
     private javax.swing.JPanel baocao;
     private javax.swing.JLabel billLabel;
