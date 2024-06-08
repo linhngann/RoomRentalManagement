@@ -23,6 +23,7 @@ view\SuaDichVu$1.class
 view\XemChiTietDichVu$2.class
 model\NhaTro.class
 view\Home$12.class
+view\Home$19.class
 view\DangNhap$1.class
 view\ThemDichVu$2.class
 controller\NhaTroController.class
@@ -37,6 +38,7 @@ view\Home$3.class
 view\Home.class
 main\main.class
 view\SuaNhaTro$2.class
+view\Home$18.class
 view\Home$9.class
 view\Home$2.class
 view\XemChiTietDichVu$1.class
