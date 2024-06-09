@@ -160,6 +160,8 @@ public class Home extends javax.swing.JFrame {
         addNhaTro = new javax.swing.JLabel();
         btnSuaNhaTro = new javax.swing.JLabel();
         btndelete = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
         taisan = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         nguoichothue = new javax.swing.JPanel();
@@ -190,7 +192,7 @@ public class Home extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(227, 242, 253));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         sidebar.setBackground(new java.awt.Color(227, 242, 253));
         sidebar.setPreferredSize(new java.awt.Dimension(285, 649));
@@ -475,6 +477,8 @@ public class Home extends javax.swing.JFrame {
         adminLabel.setText("Admin");
         sidebar.add(adminLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, -1));
 
+        nhatro.setBackground(new java.awt.Color(255, 255, 255));
+        nhatro.setPreferredSize(new java.awt.Dimension(1016, 656));
         nhatro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblnhatro.setModel(new javax.swing.table.DefaultTableModel(
@@ -493,11 +497,11 @@ public class Home extends javax.swing.JFrame {
         tblnhatro.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(tblnhatro);
 
-        nhatro.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 44, 980, 460));
+        nhatro.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 940, 420));
 
-        jLabel8.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 28)); // NOI18N
         jLabel8.setText("Danh sách các nhà trọ");
-        nhatro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
+        nhatro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
 
         addNhaTro.setBackground(new java.awt.Color(51, 153, 255));
         addNhaTro.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -509,7 +513,7 @@ public class Home extends javax.swing.JFrame {
                 addNhaTrothemNhaTro(evt);
             }
         });
-        nhatro.add(addNhaTro, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 550, 99, -1));
+        nhatro.add(addNhaTro, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 590, 110, 40));
 
         btnSuaNhaTro.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         btnSuaNhaTro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/edit.png"))); // NOI18N
@@ -520,7 +524,7 @@ public class Home extends javax.swing.JFrame {
                 btnSuaNhaTroMouseClicked(evt);
             }
         });
-        nhatro.add(btnSuaNhaTro, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 550, 102, -1));
+        nhatro.add(btnSuaNhaTro, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 590, 102, 40));
 
         btndelete.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         btndelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/delete.png"))); // NOI18N
@@ -531,7 +535,18 @@ public class Home extends javax.swing.JFrame {
                 btndeleteMouseClicked(evt);
             }
         });
-        nhatro.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 550, 85, -1));
+        nhatro.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 590, 100, 40));
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/update.png"))); // NOI18N
+        jButton1.setText("Tải lại");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        nhatro.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 90, -1, 40));
+        nhatro.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 63, 940, 10));
 
         jLabel2.setText("Tai San");
 
@@ -697,11 +712,8 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 939, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 10, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -809,7 +821,7 @@ public class Home extends javax.swing.JFrame {
                         .addComponent(suaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100)
                         .addComponent(xoaDichVuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel7)
@@ -843,7 +855,7 @@ public class Home extends javax.swing.JFrame {
             listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(listLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(nhatro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(nhatro, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
             .addGroup(listLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(listLayout.createSequentialGroup()
                     .addGap(3, 3, 3)
@@ -937,7 +949,7 @@ public class Home extends javax.swing.JFrame {
             .addComponent(list, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1378,6 +1390,11 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_quayLaiButtonActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            // TODO add your handling code here:
+            this.loadDataNhaTro();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1434,6 +1451,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel hopDongPanel;
     private javax.swing.JPanel hopdong;
     private javax.swing.JLabel houseLabel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -1450,6 +1468,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel list;
     private javax.swing.JLabel motelLabel;
     private javax.swing.JPanel nguoichothue;

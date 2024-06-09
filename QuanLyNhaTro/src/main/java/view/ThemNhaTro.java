@@ -214,6 +214,7 @@ public class ThemNhaTro extends javax.swing.JFrame{
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void ttYRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ttYRadioButtonActionPerformed
@@ -222,7 +223,6 @@ public class ThemNhaTro extends javax.swing.JFrame{
 
     private void backbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonActionPerformed
         // TODO add your handling code here:
-        new Home().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backbuttonActionPerformed
 
@@ -303,7 +303,6 @@ public class ThemNhaTro extends javax.swing.JFrame{
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Có lỗi xảy ra khi thêm nhà trọ: " + e.getMessage(), "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
-        
         this.dispose();
     }//GEN-LAST:event_thembuttonActionPerformed
 

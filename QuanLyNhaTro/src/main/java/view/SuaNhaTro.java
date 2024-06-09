@@ -225,11 +225,11 @@ public class SuaNhaTro extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void backbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonActionPerformed
         // TODO add your handling code here:
-        new Home().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backbuttonActionPerformed
 
