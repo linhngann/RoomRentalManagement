@@ -8,11 +8,13 @@ view\Home$5.class
 view\ThemDichVu$3.class
 view\DangNhap$3.class
 view\Home$20.class
+view\Home$23.class
 view\Home$10.class
 view\SuaDichVu$2.class
 view\SuaDichVu.class
 DAO\DichVuDAO.class
 view\ThemDichVu$1.class
+view\Home$21.class
 view\Home$13.class
 view\Home$4.class
 DAO\NhaTroDAO.class
@@ -21,9 +23,11 @@ view\SuaDichVu$4.class
 controller\DichVuController.class
 view\Home$7.class
 view\SuaDichVu$1.class
+view\Home$24.class
 view\XemChiTietDichVu$2.class
 model\NhaTro.class
 view\Home$12.class
+view\Home$22.class
 view\Home$19.class
 view\DangNhap$1.class
 view\ThemDichVu$2.class
