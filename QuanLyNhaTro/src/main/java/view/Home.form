@@ -598,7 +598,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="nhatro" max="32767" attributes="0"/>
+                      <Component id="nhatro" pref="733" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -1228,7 +1228,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
-                                      <Component id="themDichVuButton1" min="-2" pref="91" max="-2" attributes="0"/>
+                                      <Component id="xemDichVuButton" min="-2" pref="91" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
                                       <Component id="themDichVuButton" min="-2" pref="91" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
@@ -1260,7 +1260,7 @@
                               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="themDichVuButton1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="xemDichVuButton" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="themDichVuButton" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="suaDichVuButton" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="xoaDichVuButton" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
@@ -1465,7 +1465,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xoaDichVuButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="themDichVuButton1">
+                    <Component class="javax.swing.JButton" name="xemDichVuButton">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="0" red="ff" type="rgb"/>
@@ -1491,7 +1491,7 @@
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themDichVuButton1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xemDichVuButtonActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="quayLaiButton">

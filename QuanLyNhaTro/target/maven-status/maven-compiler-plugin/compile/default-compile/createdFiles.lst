@@ -1,3 +1,5 @@
+controller\Date.class
+model\NguoiThue.class
 view\Home$8.class
 view\ThemNhaTro$3.class
 view\Home$17.class
@@ -5,6 +7,7 @@ view\Home$1.class
 DAO\DAOInterface.class
 view\SuaNhaTro$1.class
 view\Home$5.class
+controller\NguoiThueController.class
 view\ThemDichVu$3.class
 view\DangNhap$3.class
 view\Home$20.class
@@ -29,6 +32,7 @@ model\NhaTro.class
 view\Home$12.class
 view\Home$22.class
 view\Home$19.class
+model\TinhThanh.class
 view\DangNhap$1.class
 view\ThemDichVu$2.class
 controller\NhaTroController.class
@@ -45,8 +49,10 @@ main\main.class
 view\SuaNhaTro$2.class
 view\Home$18.class
 view\Home$9.class
+view\XemChiTietDichVu$3.class
 view\Home$2.class
 view\XemChiTietDichVu$1.class
+DAO\NguoiThueDAO.class
 view\Home$11.class
 model\DichVu.class
 view\ThemDichVu.class
