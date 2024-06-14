@@ -21,6 +21,7 @@ view\Home$21.class
 view\Home$13.class
 view\Home$4.class
 DAO\NhaTroDAO.class
+view\ThemNhaTro$4.class
 view\Home$16.class
 view\SuaDichVu$4.class
 controller\DichVuController.class

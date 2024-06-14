@@ -518,6 +518,7 @@ public class Home extends javax.swing.JFrame {
         addNhaTro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add.png"))); // NOI18N
         addNhaTro.setText("Thêm");
         addNhaTro.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(204, 204, 204))); // NOI18N
+        addNhaTro.setPreferredSize(new java.awt.Dimension(120, 35));
         addNhaTro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addNhaTrothemNhaTro(evt);
@@ -529,6 +530,7 @@ public class Home extends javax.swing.JFrame {
         btnSuaNhaTro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/edit.png"))); // NOI18N
         btnSuaNhaTro.setText("Sửa");
         btnSuaNhaTro.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(204, 204, 204))); // NOI18N
+        btnSuaNhaTro.setPreferredSize(new java.awt.Dimension(123, 35));
         btnSuaNhaTro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnSuaNhaTroMouseClicked(evt);
@@ -540,6 +542,7 @@ public class Home extends javax.swing.JFrame {
         btndelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/delete.png"))); // NOI18N
         btndelete.setText("Xóa");
         btndelete.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(204, 204, 204))); // NOI18N
+        btndelete.setPreferredSize(new java.awt.Dimension(123, 35));
         btndelete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btndeleteMouseClicked(evt);
@@ -550,12 +553,13 @@ public class Home extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/update.png"))); // NOI18N
         jButton1.setText("Tải lại");
+        jButton1.setPreferredSize(new java.awt.Dimension(123, 35));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        nhatro.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 90, -1, 40));
+        nhatro.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 90, -1, 40));
         nhatro.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 63, 940, 10));
 
         jLabel2.setText("Tai San");
